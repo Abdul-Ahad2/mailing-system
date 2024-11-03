@@ -30,13 +30,14 @@ function Home() {
   const [showMailInfo, setShowMailInfo] = useState(false); // State for displaying mail info
   const [showComposeBlock, setShowComposeBlock] = useState(false); // State for showing compose block
   const [isSentView, setIsSentView] = useState(false); // State to track if sent view is active
-  const [isBinView, setIsBinView] = useState(false); // State to track if bin view is active
-  console.log(selectedEmail);
+  const [isBinView, setIsBinView] = useState(false);
+  const [user, setUser] = useState({}); // State to track if bin view is active
 
   const auth = getAuth(app);
-  const user = JSON.parse(localStorage.getItem("userInfo"));
 
   useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("userInfo"));
+    setUser(user);
     fetchEmails(); // Fetch emails on component mount
   }, []);
 
