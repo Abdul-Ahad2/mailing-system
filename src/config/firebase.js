@@ -3,13 +3,13 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBzgbenwX3x71ckd26RR5v-hpZLmnLNDgY",
-  authDomain: "mailing-system-59701.firebaseapp.com",
-  projectId: "mailing-system-59701",
-  storageBucket: "mailing-system-59701.firebasestorage.app",
-  messagingSenderId: "722655338681",
-  appId: "1:722655338681:web:4ef37bc40ebef826513b68",
-  measurementId: "G-WF7MXZN26H",
+  apiKey: procees.env.API_KEY,
+  authDomain: procees.env.AUTH_DOMAIN,
+  projectId: procees.env.PROJECT_ID,
+  storageBucket: procees.env.STORAGE_BUCKET,
+  messagingSenderId: procees.env.MESSAGING_SENDER_ID,
+  appId: procees.env.APP_ID,
+  measurementId: procees.env.MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
